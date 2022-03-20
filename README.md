@@ -8,7 +8,7 @@ You have been asked to write a platforming game that will appeal to children/tee
 The game involves navigating a character around an area collecting items and avoiding hazards.
 Collecting items adds to your score, colliding with hazards uses up lives, of which each game character only has a limited number. 
 
-Although the game is targeted towards teens, it should have an element of difficulty the further into the game that a player gets. 
+- Although the game is targeted towards teens, it should have an element of difficulty the further into the game that a player gets. 
 Increased difficulty could be done by:
 *	Increased hazards/enemies
 *	Less time
