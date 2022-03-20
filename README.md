@@ -3,8 +3,8 @@ A Platforming Game written in Python as part of an Assingment in Games Developme
 
 
 # Scenario
-## You have a job as a trainee programmer at a software developer who creates computer games.  
-## You have been asked to write a platforming game that will appeal to children/teens aged around 11-16.
+[^1]: You have a job as a trainee programmer at a software developer who creates computer games.  
+[^2]: You have been asked to write a platforming game that will appeal to children/teens aged around 11-16.
 The game involves navigating a character around an area collecting items and avoiding hazards.
 Collecting items adds to your score, colliding with hazards uses up lives, of which each game character only has a limited number. 
 
