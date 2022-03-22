@@ -75,7 +75,14 @@ class Engine:
         
         if pygame.display.get_window_size()[0]<500:
             print("It seems you have made the window smaller than expected, changing now...")
-        pygame.display.set_mode((1270, 720), pygame.RESIZABLE)
+            pygame.display.set_mode((1270, 720), pygame.RESIZABLE)
+        elif pygame.display.get_window_size()[1]<500:
+            print("It seems you have made the window smaller than expected, changing now...")
+            x = 100
+            y = 45
+            os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (x,y)
+            pygame.init()
+            pygame.display.set_mode((1270, 720), pygame.RESIZABLE)
           
     def run(self):
         """ Runs the game UI """
