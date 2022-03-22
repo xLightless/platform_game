@@ -1,0 +1,1 @@
+cmd /k ""C:\Programming\GitHub\platform_game\python\Scripts\activate.bat"
