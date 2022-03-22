@@ -6,6 +6,7 @@
 from screeninfo import get_monitors
 from container import Console, Command, Color
 from event import Event
+from assets.characters.character import Character
 
 import pygame
 import os
@@ -41,11 +42,13 @@ class Engine:
         int_display = [input_monitor if type(input_monitor) == int else 0]
         pygame.init()
         pygame.display.set_caption("Platform Game")
+        
         self.clock = pygame.time.Clock()
         self.terminated = False
         self.engine = pygame.display.set_mode((1270,720), display=int_display[0], flags=pygame.RESIZABLE)
         self.icon = pygame.image.load(f'{engine_icon}')
         pygame.display.set_icon(self.icon)
+        self.engine_wh = (self.engine.get_width(),self.engine.get_height())        
 
     def render(self, surface, x:int = None, y:int = None, image_position = None):
         """ Renders the graphic to display
@@ -72,16 +75,23 @@ class Engine:
         
     def engine_resize(self,engine = None, x:int = None, y:int = None):
         """ Resizes the engine to initalisation conditions """
+        dimensions = (self.engine.get_width(),self.engine.get_height())
         
-        if pygame.display.get_window_size()[0]<500:
-            print("It seems you have made the window smaller than expected, changing now...")
+        if dimensions[0]<self.engine_wh[0]/2:
+            console.warn_user(1,
+                              message=console.text(
+                                  "It seems you have made the window height smaller than expected, changing now...",
+                                  color.yellow,
+                                  is_bold=True))
+            
             pygame.display.set_mode((1270, 720), pygame.RESIZABLE)
-        elif pygame.display.get_window_size()[1]<500:
-            print("It seems you have made the window smaller than expected, changing now...")
-            x = 100
-            y = 45
-            os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (x,y)
-            pygame.init()
+            
+        elif dimensions[1]<self.engine_wh[1]/2:
+            console.warn_user(1,
+                              message=console.text(
+                                  "It seems you have made the window width than expected, changing now...",
+                                  color.yellow,
+                                  is_bold=True))
             pygame.display.set_mode((1270, 720), pygame.RESIZABLE)
           
     def run(self):
@@ -93,7 +103,6 @@ class Engine:
             self.event = Event(event_handler=pygame.event.get())
             self.event.loop()
             
-            self.render(self.icon,0,0,image_position="center")
             pygame.display.update()
 
 
