@@ -1,5 +1,5 @@
 # Platform Game
-A Platforming Game written in Python as part of an Assingment in Games Development
+A Platforming Game written in Python as part of an Assignment in Games Development
 
 
 # Scenario
