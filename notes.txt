@@ -8,6 +8,7 @@ pip3 install pygame
 .\env\Scripts\activate
 
 python: C:\Users\WS\AppData\Local\Programs\Python
+C:/Users/WS/AppData/Local/Programs/Python/Python310/python.exe
 
 else if cmd is enabled use:
 cmd /k ""C:\Programming\GitHub\platform_game\python\Scripts\activate.bat"
