@@ -73,7 +73,7 @@ class Engine:
             
         pygame.display.update()
         
-    def engine_resize(self,engine = None, x:int = None, y:int = None):
+    def engine_resize(self, engine = None, x:int = None, y:int = None):
         """ Resizes the engine to initalisation conditions """
         dimensions = (self.engine.get_width(),self.engine.get_height())
         
