@@ -1,6 +1,9 @@
 activate python environment in campus use:
 cd h:/Desktop/Programming/game
 py -m virtualenv python
+pip3 uninstall pygame
+pip3 cache purge
+pip3 install pygame
 .\env\Scripts\activate
 
 else if cmd is enabled use:
