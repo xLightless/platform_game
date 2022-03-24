@@ -1,4 +1,5 @@
 activate python environment in campus use:
+py -m virtualenv python
 .\env\Scripts\activate
 
 else if cmd is enabled use:
