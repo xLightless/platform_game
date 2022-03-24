@@ -1,0 +1,2 @@
+activate python environment in campus use:
+.\env\Scripts\activate
