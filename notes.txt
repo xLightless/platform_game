@@ -1,4 +1,5 @@
 activate python environment in campus use:
+cd h:/Desktop/Programming/game
 py -m virtualenv python
 .\env\Scripts\activate
 
