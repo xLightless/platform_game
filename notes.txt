@@ -1,2 +1,5 @@
 activate python environment in campus use:
 .\env\Scripts\activate
+
+else if cmd is enabled use:
+cmd /k ""C:\Programming\GitHub\platform_game\python\Scripts\activate.bat"
